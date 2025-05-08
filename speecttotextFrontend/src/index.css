@@ -1,0 +1,322 @@
+input{
+    background-color:rgb(41,153,209) ;
+    border-style: groove;
+}
+.card1{
+    border: 1px solid rgb(92, 92, 219);
+    border-radius: 30px;
+    width: 20%;
+    height: 300px;
+    margin-left: 40%;
+    margin-top: 10%;
+    text-align: center;
+}
+card{
+    width: 50%;
+    
+}
+input{
+    margin-left: 1rem;
+}
+.b1{
+    background-color: rgb(221, 20, 20);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: large;
+}
+.b1:hover{
+    cursor:pointer;
+    background-color: rgb(0, 255, 76);
+}
+.log{
+    
+    border-style: groove;
+    border-color:rgb(2, 2, 4) ;
+    border-width: 2px;
+    height: 50vh;
+    padding-left:503px;
+}
+.buttonlogon>button{
+    background-color: rgb(198, 11, 11);
+    border-width: 2px;
+    border-radius: 10px;
+    color: aliceblue;
+    border-color: black; 
+    padding-top: 4px; 
+    padding-bottom: 4px;
+    padding-left: px;
+    padding-right: 6px;
+} 
+.on{   
+    height:690px ;
+    border:groove;
+}
+.buttonlogon{
+    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-left: 93%;
+    background-color: rgb(64, 141, 234);
+    
+}
+.Profile-button:hover{
+    background-color: rgb(5, 178, 42);
+    font-size: 15px;
+    cursor:pointer;
+}
+.signuppage{
+    border:groove ;
+    height: 680px; 
+}
+.header{
+    background-color: rgb(80, 143, 231);
+    height:30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 95%;
+}
+.header-btn{
+     padding-bottom: 3px;
+    border-radius: 10px;
+    background-color: rgb(187, 25, 25);
+}
+.header-btn:hover{
+    cursor: pointer;
+    background-color: azure;
+}
+.first-half{
+    border:groove;
+    height:150px;
+    align-content: center;  
+    margin: 30px;
+}
+.details1{
+    padding:10px;
+} 
+.details1>label{
+    padding-left: 20px;
+}
+.remdetails{
+    padding-left: 10px;
+}
+.remdetails>label{
+    padding-left: 20px;
+}
+.details2{
+    border:groove;
+    height:100px;
+    align-content:center;
+    margin:30px;
+}
+.det{
+    padding:10px;
+}
+.det>label{
+    padding-left: 20px;
+}
+.su>button{
+    border-radius: 4px;  
+    padding-left: 40px; 
+    padding-right: 40px;
+    background-color: rgb(7, 204, 56);
+}
+.su>button:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+.su{
+    padding-top: 50px;
+    padding-left: 40%;
+   
+}
+h4{
+    padding-left: 20px;
+    align-items: center;
+}
+.for{
+    border:groove;
+    height:500px;
+
+}
+.for1{
+    border: groove;
+    height:200px;
+    border-radius: 30px;
+    margin: 20px;
+    padding-left: 10px;
+}
+.us>label{
+    padding-left: 50px;
+}
+.mo{
+    padding-top: 20px;
+}
+.mo>label{
+    padding-left: 18px;
+}
+.con{
+    padding-left: 50%;
+    padding-top: 20px;
+}
+.con>button{
+    background-color: rgb(10, 157, 25);
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: aliceblue;
+    
+}
+.con>button:hover{
+    cursor: pointer;
+    background-color: black;
+}
+.for2{
+    border: groove;
+    height:150px;
+    border-radius: 30px;
+    margin: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.for2>label{
+    padding-left: 20px;
+}
+.up{
+    padding-left: 52%;
+    padding-top: 40PX;
+}
+.up>button{
+    background-color: rgb(6, 168, 14);
+    color:aliceblue;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+.up>button:hover{
+    cursor: pointer;
+    background-color: black;
+}
+.btl>button{
+    background-color: rgb(186, 29, 5);
+    color:aliceblue;
+    border-radius: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+    float: right;
+    margin-right: 40px;
+
+}
+.btl>button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 60, 255);
+}
+.header{
+    border: groove;
+   
+}
+.fp{
+    border: groove;
+    height: 600px;
+}
+.hp{
+    border: groove;
+    height:700px; 
+   
+}
+.hd{
+    border: groove;
+    height: 40px;
+    background-color: rgb(57, 112, 243);
+}
+.pro{
+    border-style:groove;
+    margin:10px;
+    margin-top: 15px;
+    height: 280px;
+    border-color: rgb(81, 182, 219);
+}
+.hr>table{
+    margin-right:20px;
+}
+.sign{
+    display: flex;
+}
+.app{
+    border:groove;
+    border-color: rgb(139, 132, 221);
+    width: 1500px;
+    margin: 20px;
+    border-radius: 15px;
+    
+}
+.es{
+    text-align: center;
+}
+.fn{
+    margin: 20px;
+    padding-left: 2px;
+}
+.fn>label{
+    padding-left: 20px;
+}
+.cn{
+    margin: 20px;
+    padding-top: 1px;
+    padding-right: 3px;
+}
+.cn>label{
+    padding-left: 20px;
+}
+.ad{
+    margin: 20px;
+    padding-left: 20px;
+}
+.af{
+    margin: 20px;
+    padding-left: 20px;
+   
+}
+.af>input{
+    color: rgb(3, 1, 12);
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.aly{
+    padding-left: 50%;
+    padding-bottom: 15px;
+}
+.aly>button{
+    border-color: black;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: aliceblue;
+    background-color: rgb(2, 159, 20);
+}
+.aly>button:hover{
+    cursor:pointer;
+    background-color: black;
+}
+.tab{
+    margin: 20px;
+    border-collapse: collapse;
+    border:2px solid black
+   
+}
+table,tr,td{
+    border-collapse: collapse;
+    border:1px solid black;
+    margin: 20px;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+.tab>h3{
+    margin: 20px;
+}
