@@ -1,28 +1,32 @@
-// AudioRecorder.js
 import React, { useRef, useState } from 'react';
+import RecordRTC from 'recordrtc';
 
 const AudioRecorder = () => {
   const [transcript, setTranscript] = useState('');
-  const mediaRecorderRef = useRef(null);
-  const audioChunksRef = useRef([]);
+  const recorderRef = useRef(null);
+  const streamRef = useRef(null);
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const mediaRecorder = new MediaRecorder(stream, {
-      mimeType: 'audio/webm' // We'll convert this on the backend
+    streamRef.current = stream;
+
+    recorderRef.current = RecordRTC(stream, {
+      type: 'audio',
+      mimeType: 'audio/wav', // Record directly in WAV
+      recorderType: RecordRTC.StereoAudioRecorder,
+      desiredSampRate: 16000,
+      numberOfAudioChannels: 1,
     });
 
-    mediaRecorder.ondataavailable = (e) => {
-      audioChunksRef.current.push(e.data);
-    };
+    recorderRef.current.startRecording();
+  };
 
-    mediaRecorder.onstop = async () => {
-      const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
-      console.log("Blob size:", audioBlob.size); // Should be > 0
-      audioChunksRef.current = [];
+  const stopRecording = () => {
+    recorderRef.current.stopRecording(async () => {
+      const audioBlob = recorderRef.current.getBlob();
 
       const formData = new FormData();
-      formData.append('file', audioBlob, 'recording.webm');
+      formData.append('file', audioBlob, 'recording.wav');
 
       const response = await fetch('http://localhost:5000/upload-audio', {
         method: 'POST',
@@ -31,16 +35,8 @@ const AudioRecorder = () => {
 
       const data = await response.json();
       setTranscript(data.transcript || 'No speech recognized');
-    };
-
-    mediaRecorderRef.current = mediaRecorder;
-    mediaRecorder.start();
-  };
-
-  const stopRecording = () => {
-    if (mediaRecorderRef.current) {
-      mediaRecorderRef.current.stop();
-    }
+      streamRef.current.getTracks().forEach(track => track.stop());
+    });
   };
 
   return (
@@ -54,7 +50,3 @@ const AudioRecorder = () => {
 };
 
 export default AudioRecorder;
-
-
-
-
